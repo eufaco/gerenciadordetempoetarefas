@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="br"><html>
+    <head>
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/img/tempo-para-o-mercado.ico" />
+
+    <!-- Meta--> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Title--> 
+    <title>Gerenciador de Tempo e Tarefas</title
+        >
+     
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+     
+    <!-- Style-->
+    <link href="styles.css" rel="stylesheet" />        
+    </head>
+
+    <!-- Body--> 
+    <body>
+    <div class="container" style="color: #ff0000;" style="display: none;">
+    <h1>Gerenciador de Tempo e Tarefas</h1>
+    <h3>Adicionar Tarefas</h3>
+    <form id="taskForm">
+        <label for="taskName">Nome da Tarefa:</label><br>
+        <input type="text" id="taskName" name="taskName"><br><br>
+        <label for="taskDuration">Duração da Tarefa: (em minutos):</label><br>
+        <input type="number" id="taskDuration" name="taskDuration"><br><br>
+        <input class="button" type="submit" value="Adicionar">
+    </form><br><br>
+    <h3>Tarefas</h3>    
+    <table id="tasksTable">
+        <tr>
+            <th>Nome da Tarefa</th>
+            <th>Duração da Tarefa</th>
+            <th>Tempo Restante</th>
+            <th>Ações</th>
+        </tr>
+    </table><br><br></div>  
+
+     <!-- Footer-->     
+        <div class="copyright">
+        <div class="copyright" text-muted style="color: #ff0000;">Copyright © Adenny Fernandes - 2023</div>
+        </div>
+
+    <!-- Script-->  
+        <script src="scripts.js"></script>
+
+    </body>
+    </html>
