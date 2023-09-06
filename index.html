@@ -25,14 +25,20 @@
 
     <!-- Body--> 
     <body>
+    <!-- Data e Horário de Brasília-->
+        <div class="container">
+        <div class="date" id="date"></div>
+        <div class="time" id="time"></div>
+        </div>
+
     <div class="container" style="color: #ff0000;" style="display: none;">
     <h1>Gerenciador de Tempo e Tarefas</h1>
     <h3>Adicionar Tarefas</h3>
     <form id="taskForm">
         <label for="taskName">Nome da Tarefa:</label><br>
-        <input type="text" id="taskName" name="taskName"><br><br>
+        <input type="text" placeholder="Digite a Tarefa por favor" id="taskName" name="taskName" ><br><br>
         <label for="taskDuration">Duração da Tarefa: (em minutos):</label><br>
-        <input type="number" id="taskDuration" name="taskDuration"><br><br>
+        <input type="number" id="taskDuration" type="text" placeholder="Digite em Minutos aqui" name="taskDuration"><br><br>
         <input class="button" type="submit" value="Adicionar">
     </form><br><br>
     <h3>Tarefas</h3>    

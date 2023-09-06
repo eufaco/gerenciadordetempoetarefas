@@ -49,8 +49,28 @@
         }
         .container {
             margin: 0 auto;
-            width: 80%;
-            
+            width: 80%;            
+        }        
+        input[type="text"]::placeholder,
+        input[type="number"]::placeholder {
+            color: #ffffff; /* Cor do texto do placeholder */
+            background-color: #9e4747; /* Cor de fundo do placeholder */
+            font-size: 15px; /* Tamanho da fonte */
+            text-align: center;        
         }
+        /* Data e Horário de Brasília */
+        .container {
+            text-align: center;
+            color: #ff0000;
+        }        
+        .date,
+        .time {
+            font-size: 2rem;
+            margin: 10px;
+        }
+         
+
+        
+
      
         
