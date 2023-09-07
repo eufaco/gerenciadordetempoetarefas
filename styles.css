@@ -1,15 +1,15 @@
         body { 
-            background-color: aqua;
             background-image: url('assets/img/background/background.png');
-            background-attachment: fixed;           
+            background-size: cover;
             background-position: center;
+            background-attachment: fixed;
+            background-color: aqua; /* Cor de fundo alternativa, caso a imagem não seja carregada */
             font-family: Arial;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
+            margin: 0;
             min-height: 100vh;
-            margin: 0;                              
+        }
+                                   
                        
         }        
         h1, h3, form, table {
