@@ -1,15 +1,16 @@
-        body { 
+        body {
             background-image: url('assets/img/background/background.png');
-            background-size: cover;
+            background-size: 50%; /* Reduz o tamanho da imagem para 50% do original */
             background-position: center;
             background-attachment: fixed;
             background-color: aqua; /* Cor de fundo alternativa, caso a imagem não seja carregada */
             font-family: Arial;
             text-align: center;
             margin: 0;
-            min-height: 100vh;                             
-                       
+            min-height: 100vh;
+            background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
         }        
+
         h1, h3, form, table {
             text-align: center;
         }        
