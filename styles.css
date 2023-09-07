@@ -66,6 +66,7 @@
             padding: 10px; /* Espaçamento interno desejado */
             border: 2px solid #ccc; /* Estilo da borda */
             border-radius: 5px; /* Arredondamento da borda */
+            background-color: transparent; /* Remove a cor de fundo */
         }        
         /* Data e Horário de Brasília */
         .calendar {
