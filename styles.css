@@ -93,7 +93,30 @@
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+        }        
+        
+        /* Estilo do botão */
+        button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
         }
+
+        /* Estilo do botão quando hover (passar o mouse por cima) */
+        button:hover {
+        background-color: #0056b3;
+        }
+
+        /* Estilo do áudio */
+        #audioPlayer {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        }      
         
         h1 {
             font-size: 2.5em;

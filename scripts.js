@@ -97,5 +97,19 @@
             document.getElementById('time').textContent = time;
         }        
         setInterval(updateTime, 1000);
+
+        const alarmSound = document.getElementById('alarmSound');
+        const playAlarmButton = document.getElementById('playAlarm');
+
+        playAlarmButton.addEventListener('click', () => {
+            if (alarmSound.paused) {
+                alarmSound.play();
+                playAlarmButton.textContent = 'Parar Alarme';
+            } else {
+                alarmSound.pause();
+                alarmSound.currentTime = 0;
+                playAlarmButton.textContent = 'Tocar Alarme';
+            }
+        });
         
    
