@@ -88,7 +88,7 @@
         setInterval(updateTime, 1000);
         updateTime();       
         
-        /* Despertador com Alarme e data*/
+        /* Despertador com Alarme */
         function updateTime() {
             const now = new Date();
             const date = now.toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
