@@ -1,123 +1,117 @@
 <!DOCTYPE html>
-    <html lang="br"><html>
-    <head>
-
-    <!-- Favicon-->
+<html lang="br">
+<head>
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/Tempo/tempo-para-o-mercado.ico" />
 
-    <!-- Font Awesome icons (free version)-->
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=E1qmg9-TBdiraWoj_IC4ZfTKreGgiBPel7x6RPpi67nSDGRbzpJdU5Oe4UTsKbecD_3dM3gF96t8wz4PH4m7cg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9wZXNxdWlzYWRvcmF1dG9kaWRhdGljby5naXRodWIuaW8v"/><script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome icons (free version) -->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 
-    <!-- Google fonts-->
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
 
-    <!-- Third party plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />  
+    <!-- Third party plugin CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
 
-    <!-- Meta--> 
+    <!-- Meta -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <!-- Title--> 
+    <!-- Title -->
     <title>Gerenciador de Tempo e Tarefas</title>
-     
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-     
-    <!-- Style-->
-    <link href="styles.css" rel="stylesheet" />        
-    </head>    
 
-    <!-- Body--> 
-    <body>
+    <!-- Style -->
+    <link href="styles.css" rel="stylesheet" />
+</head>
 
-    <div class="container" style="color: #ff0000;" style="display: none;">
-    <h1>Gerenciador de Tempo e Tarefas</h1>
+<body>
+    <div class="container" style="color: #ff0000;">
+        <h1>Gerenciador de Tempo e Tarefas</h1>
 
-    <!-- Data e Horário de Brasília-->
-    <div class="calendar">
-    <div class="date" id="date"></div>
-    <div class="time" id="time"></div>
-    </div> 
-
-    <!-- Despertador com Alarme -->        
-    <div id="alarm"></div>
-    <br>
-    <label for="alarmDate">Data do alarme:</label>
-    <input type="date" id="alarmDate">
-    <br><br>
-    <label for="alarmTime">Horário do alarme:</label>
-    <input type="time" id="alarmTime">
-    <br><br>
-    <button onclick="startAlarm()">Iniciar</button>    
-    <button onclick="stopAlarm()">Parar</button>    
-    <button onclick="deleteAlarm()">Deletar</button>
-    <audio id="alarmSound" src="assets/img/alarme/alarm.mp3"></audio>
-
-
-
-    <h3>Adicionar Tarefas</h3>
-    <form id="taskForm">
-        <label for="taskName">Nome da Tarefa:</label><br>
-        <input type="text" class="custom-input" placeholder="Digite a Tarefa por favor" id="taskName" name="taskName" ><br><br>
-        <label for="taskDuration">Duração da Tarefa: (em minutos):</label><br>
-        <input type="number" id="taskDuration" type="text" class="custom-input" placeholder="Digite em Minutos aqui" name="taskDuration"><br><br>
-        <input class="button" type="submit" value="Adicionar">
-    </form><br><br>
-    <h3>Tarefas</h3>    
-    <table id="tasksTable">
-        <tr>
-            <th>Nome da Tarefa</th>
-            <th>Duração da Tarefa</th>
-            <th>Tempo Restante</th>
-            <th>Ações</th>
-        </tr>
-    </table><br><br></div>
-    
-    <!-- Social Media-->
-    <section class="social">
-        <div class="botao-rs linkedin">                 
-        <a href="https://www.linkedin.com/in/adennyfernandes/" title="linkedin" target="_blank">
-            <img class="img"><img src="assets/img/social/linkedin.png" alt="#"></i>
-          <span>Linkedin</span>
-        </a></div>
-
-        <div class="botao-rs github">              
-            <a href="https://github.com/AdennyFernandes" title="github" target="_blank">
-            <img class="img"><img src="assets/img/social/github.png" alt="#"></i>
-            <span>GitHub</span>
-            </a></div>
-      
-       <div class="botao-rs facebook">              
-        <a href="https://www.facebook.com/adennyfernandez" title="facebook" target="_blank">    
-          <img class="img"><img src="assets/img/social/facebook.png" alt="#"></i>
-           <span>Facebook</span>
-        </a></div>
-
-       <div class="botao-rs instagram">              
-        <a href="https://www.instagram.com/adennyfer/" title="instagram" target="_blank">
-          <img class="img"><img src="assets/img/social/instagram.png" alt="#"></i>
-          <span>Instagram</span>
-       </a></div> 
-
-       <div class="botao-rs whatsapp">              
-       <a href="https://api.whatsapp.com/send?phone=5527992362609" title="whatsApp" target="_blank">
-       <img class="img"><img src="assets/img/social/whatsapp.png" alt="#"></i>
-       <span>Whatsapp</span>
-       </a></div>       
-    </section>
-
-     <!-- Footer-->     
-        <div class="copyright">
-        <div class="copyright" text-muted style="color: #ff0000;">Copyright © Adenny Fernandes - 2023</div>
+        <!-- Data e Horário de Brasília -->
+        <div class="calendar">
+            <div class="date" id="date"></div>
+            <div class="time" id="time"></div>
         </div>
 
-    <!-- Script-->  
-        <script src="scripts.js"></script>
+        <!-- Despertador com Alarme -->
+        <div id="alarm"></div>
+        <br>
+        <label for="alarmDate">Data do alarme:</label>
+        <input type="date" id="alarmDate">
+        <br><br>
+        <label for="alarmTime">Horário do alarme:</label>
+        <input type="time" id="alarmTime">
+        <br><br>
+        <button onclick="startAlarm()">Iniciar</button>
+        <button onclick="stopAlarm()">Parar</button>
+        <button onclick="deleteAlarm()">Deletar</button>
+        <audio id="alarmSound" src="assets/img/alarme/alarm.mp3"></audio>
 
-    </body>
-    </html>
+        <h3>Adicionar Tarefas</h3>
+        <form id="taskForm">
+            <label for="taskName">Nome da Tarefa:</label><br>
+            <input type="text" class="custom-input" placeholder="Digite a Tarefa por favor" id="taskName" name="taskName"><br><br>
+            <label for="taskDuration">Duração da Tarefa (em minutos):</label><br>
+            <input type="number" id="taskDuration" class="custom-input" placeholder="Digite em Minutos aqui" name="taskDuration"><br><br>
+            <input class="button" type="submit" value="Adicionar">
+        </form><br><br>
+        <h3>Tarefas</h3>
+        <table id="tasksTable">
+            <tr>
+                <th>Nome da Tarefa</th>
+                <th>Duração da Tarefa</th>
+                <th>Tempo Restante</th>
+                <th>Ações</th>
+            </tr>
+        </table><br><br>
+    </div>
+
+    <!-- Social Media -->
+    <section class="social">
+        <div class="botao-rs linkedin">
+            <a href="https://www.linkedin.com/in/adennyfernandes/" title="linkedin" target="_blank">
+                <img class="img" src="assets/img/social/linkedin.png" alt="#">
+                <span>Linkedin</span>
+            </a>
+        </div>
+
+        <div class="botao-rs github">
+            <a href="https://github.com/AdennyFernandes" title="github" target="_blank">
+                <img class="img" src="assets/img/social/github.png" alt="#">
+                <span>GitHub</span>
+            </a>
+        </div>
+
+        <div class="botao-rs facebook">
+            <a href="https://www.facebook.com/adennyfernandez" title="facebook" target="_blank">
+                <img class="img" src="assets/img/social/facebook.png" alt="#">
+                <span>Facebook</span>
+            </a>
+        </div>
+
+        <div class="botao-rs instagram">
+            <a href="https://www.instagram.com/adennyfer/" title="instagram" target="_blank">
+                <img class="img" src="assets/img/social/instagram.png" alt="#">
+                <span>Instagram</span>
+            </a>
+        </div>
+
+        <div class="botao-rs whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=5527992362609" title="whatsApp" target="_blank">
+                <img class="img" src="assets/img/social/whatsapp.png" alt="#">
+                <span>Whatsapp</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="copyright" style="color: #ff0000;">Copyright © Adenny Fernandes - 2023</div>
+
+    <!-- Script -->
+    <script src="scripts.js"></script>
+</body>
+</html>
