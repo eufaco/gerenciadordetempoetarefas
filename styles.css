@@ -3,7 +3,6 @@
             background-attachment: fixed;
             background-size: cover;
             background-position: center center;            
-            min-height: 100vh; /* Garante que o corpo tenha pelo menos 100% da altura da janela de visualização */
             font-family: Arial;
             display: flex;
             flex-direction: column;
