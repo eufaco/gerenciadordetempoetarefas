@@ -74,28 +74,19 @@
             date.setSeconds(seconds);
             return date.toISOString().substr(11, 8);
         }
+
         /* Data e Horário de Brasília */
-        function updateDateTime() {
-            const timeZoneOffset = -3; // Horário de Brasília (GMT-3)
-            const now = new Date();
-            const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
-            const brasiliaTime = new Date(utcTime + (3600000 * timeZoneOffset));
-        
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const dateFormat = new Intl.DateTimeFormat('pt-BR', options);
-        
-            const dateElement = document.getElementById('date');
-            dateElement.textContent = dateFormat.format(brasiliaTime);
-        
-            const timeElement = document.getElementById('time');
-            const hour = brasiliaTime.getHours().toString().padStart(2, '0');
-            const minute = brasiliaTime.getMinutes().toString().padStart(2, '0');
-            const second = brasiliaTime.getSeconds().toString().padStart(2, '0');
-            timeElement.textContent = `${hour}:${minute}:${second}`;
-        }        
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-        
+        const dateElement = document.querySelector('#date');
+        const timeElement = document.querySelector('#time');
+        function updateTime() {
+        const now = new Date();
+        const date = now.toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        const time = now.toLocaleTimeString('pt-BR', { hour12: false });
+        dateElement.textContent = date;
+        timeElement.textContent = time;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();       
         
         /* Despertador com Alarme e data*/
         function updateTime() {
@@ -104,8 +95,7 @@
             const time = now.toLocaleTimeString('pt-BR');
             document.getElementById('date').textContent = date;
             document.getElementById('time').textContent = time;
-        }
-        
+        }        
         setInterval(updateTime, 1000);
         
    
