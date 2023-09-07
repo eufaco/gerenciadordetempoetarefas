@@ -1,15 +1,16 @@
-        body {                      
-            background-image: url('assets/img/background/background.png'); 
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center center;            
+        body { 
+            background-color: aqua;
+            background-image: url('assets/img/background/background.png');
+            background-attachment: fixed;           
+            background-position: center;
             font-family: Arial;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;            
+            margin: 0;                              
+                       
         }        
         h1, h3, form, table {
             text-align: center;
@@ -47,7 +48,7 @@
             background-color: #3e8e41;
         }
         .container {
-            margin: 0 auto;
+            margin: auto;
             width: 80%;            
         }        
         input[type="text"]::placeholder,
@@ -58,7 +59,7 @@
             text-align: center;        
         }
         /* Data e Horário de Brasília */
-        .container {
+        .calendar {
             text-align: center;
             color: #ff0000;
         }        
