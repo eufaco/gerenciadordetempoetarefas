@@ -34,14 +34,31 @@
 
     <!-- Body--> 
     <body>
-    <!-- Data e Horário de Brasília-->
-        <div class="calendar">
-        <div class="date" id="date"></div>
-        <div class="time" id="time"></div>
-        </div>       
 
     <div class="container" style="color: #ff0000;" style="display: none;">
     <h1>Gerenciador de Tempo e Tarefas</h1>
+    <!-- Despertador com Alarme e data -->        
+    <div id="alarm"></div>
+    <br>
+    <label for="alarmDate">Data do alarme:</label>
+    <input type="date" id="alarmDate">
+    <br><br>
+    <label for="alarmTime">Horário do alarme:</label>
+    <input type="time" id="alarmTime">
+    <br><br>
+    <button onclick="startAlarm()">Iniciar</button>
+    <button onclick="pauseAlarm()">Pausar</button>
+    <button onclick="stopAlarm()">Parar</button>
+    <button onclick="editAlarm()">Editar</button>
+    <button onclick="deleteAlarm()">Deletar</button>
+    <audio id="alarmSound" src="alarm.mp3"></audio>
+
+<!-- Data e Horário de Brasília-->
+    <div class="calendar">
+    <div class="date" id="date"></div>
+    <div class="time" id="time"></div>
+    </div> 
+
     <h3>Adicionar Tarefas</h3>
     <form id="taskForm">
         <label for="taskName">Nome da Tarefa:</label><br>

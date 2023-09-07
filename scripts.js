@@ -95,10 +95,17 @@
         }        
         updateDateTime();
         setInterval(updateDateTime, 1000);
-
-        /* Despertador */
-      
         
         
+        /* Despertador com Alarme e data*/
+        function updateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            const time = now.toLocaleTimeString('pt-BR');
+            document.getElementById('date').textContent = date;
+            document.getElementById('time').textContent = time;
+        }
+        
+        setInterval(updateTime, 1000);
         
    

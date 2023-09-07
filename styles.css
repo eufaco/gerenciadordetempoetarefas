@@ -80,7 +80,46 @@
             font-weight: bold;
         }
 
-        /*!.. Style social media ..*/
+        /* Despertador com Alarme */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        
+        label {
+            font-size: 1.2em;
+        }
+        
+        input[type="date"],
+        input[type="time"] {
+            font-size: 1.2em;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            font-size: 1em;
+            padding: 5px 20px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .calendar {
+            margin-top: 50px;
+        }
+        
+        .date,
+        .time {
+            font-size: 1.5em;
+        }
+
+        /* Style social media */
         .botao-rs{
         padding:1em;
         border-radius:100vw;
