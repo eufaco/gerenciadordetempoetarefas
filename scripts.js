@@ -74,42 +74,55 @@
             date.setSeconds(seconds);
             return date.toISOString().substr(11, 8);
         }
-
         /* Data e Horário de Brasília */
-        const dateElement = document.querySelector('#date');
-        const timeElement = document.querySelector('#time');
-        function updateTime() {
-        const now = new Date();
-        const date = now.toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-        const time = now.toLocaleTimeString('pt-BR', { hour12: false });
-        dateElement.textContent = date;
-        timeElement.textContent = time;
-        }
-        setInterval(updateTime, 1000);
-        updateTime();       
+const dateElement = document.querySelector('#date');
+const timeElement = document.querySelector('#time');
+
+function updateTime() {
+    const now = new Date();
+    const date = now.toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' });
+    const time = now.toLocaleTimeString('pt-BR');
+    dateElement.textContent = date;
+    timeElement.textContent = time;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+
+// Alarm functionality
+const alarmSound = document.getElementById('alarmSound');
+let alarmTimeout;
+
+function startAlarm() {
+    const alarmDate = document.getElementById('alarmDate').value;
+    const alarmTime = document.getElementById('alarmTime').value;
+    if (!alarmDate || !alarmTime) {
+        alert('Por favor, selecione a data e o horário do alarme.');
+        return;
+    }
+    const alarmDateTime = new Date(`${alarmDate}T${alarmTime}:00`);
+    const now = new Date();
+    if (alarmDateTime < now) {
+        alert('A data e o horário do alarme devem ser no futuro.');
+        return;
+    }
+    const timeToAlarm = alarmDateTime - now;
+    alarmTimeout = setTimeout(() => {
+        alarmSound.play();
+    }, timeToAlarm);
+}
+
+function stopAlarm() {
+    clearTimeout(alarmTimeout);
+    alarmSound.pause();
+    alarmSound.currentTime = 0;
+}
+
+function deleteAlarm() {
+    stopAlarm();
+    document.getElementById('alarmDate').value = '';
+    document.getElementById('alarmTime').value = '';
+}
         
-        /* Despertador com Alarme */
-        function updateTime() {
-            const now = new Date();
-            const date = now.toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-            const time = now.toLocaleTimeString('pt-BR');
-            document.getElementById('date').textContent = date;
-            document.getElementById('time').textContent = time;
-        }        
-        setInterval(updateTime, 1000);
-
-        const alarmSound = document.getElementById('alarmSound');
-        const playAlarmButton = document.getElementById('playAlarm');
-
-        playAlarmButton.addEventListener('click', () => {
-            if (alarmSound.paused) {
-                alarmSound.play();
-                playAlarmButton.textContent = 'Parar Alarme';
-            } else {
-                alarmSound.pause();
-                alarmSound.currentTime = 0;
-                playAlarmButton.textContent = 'Tocar Alarme';
-            }
-        });
         
    
