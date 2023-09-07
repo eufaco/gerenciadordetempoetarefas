@@ -53,9 +53,19 @@
         input[type="number"]::placeholder {
             color: #ffffff; /* Cor do texto do placeholder */
             background-color: #9e4747; /* Cor de fundo do placeholder */
-            font-size: 15px; /* Tamanho da fonte */
+            font-size: 18px; /* Tamanho da fonte */
+            width: 200px; /* Largura desejada */
+            height: 20px; /* Altura desejada */
             text-align: center;        
         }
+        .custom-input {
+            width: 200px; /* Largura desejada */
+            height: 20px; /* Altura desejada */
+            font-size: 18px; /* Tamanho da fonte desejado */
+            padding: 10px; /* Espaçamento interno desejado */
+            border: 2px solid #ccc; /* Estilo da borda */
+            border-radius: 5px; /* Arredondamento da borda */
+        }        
         /* Data e Horário de Brasília */
         .calendar {
             text-align: center;
