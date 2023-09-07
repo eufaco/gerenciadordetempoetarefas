@@ -79,6 +79,61 @@
             margin: 10px;
             font-weight: bold;
         }
+
+        /*!.. Style social media ..*/
+        .botao-rs{
+        padding:1em;
+        border-radius:100vw;
+        display:inline-flex;
+        margin:0.5em;  
+
+        }
+        .botao-rs a { 
+        text-decoration:none; 
+        color:#fff; 
+        display: inherit;          
+        }
+
+        .linkedin{
+        background:#0e76a8;
+        }
+
+        .github{
+        background:#16181b;
+        }
+
+        .facebook{
+        background:#3b5998;
+        }
+
+        .instagram{  
+        background:hsl(0 0% 10%);
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        }
+
+        .whatsapp{
+        background:#15cc31;
+        }
+
+        .botao-rs span{
+        width:0px;
+        overflow:hidden;
+        transition:350ms ease;
+        }
+
+        .botao-rs:hover span{
+        width:100px;
+        margin-left:0;
+        }
+
+        .social{
+        display: flex;  
+        justify-content: center;  
+        transition: opacity 0.25s ease;
+        margin-top: -5em;
+        font-size: 10px    
+        }
+      
          
 
         
